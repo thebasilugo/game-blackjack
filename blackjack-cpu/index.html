@@ -4,22 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+      integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <title>Blackjack</title>
   </head>
-  <body class="flex flex-col items-center justify-center min-h-screen bg-gray-200 text-gray-800">
-      <button class="back-btn bg-blue-400 hover:bg-blue-500 text-white font-bold py-1 px-2 rounded m-2" onclick="window.location.href = '../index.html';">
-        <i class="chevron left icon"></i>&nbsp;go back
+  <body
+    class="flex flex-col items-center justify-center min-h-screen bg-gray-200 text-gray-800"
+  >
+    <div class="flex">
+      <button
+        class="back-btn bg-blue-400 hover:bg-blue-500 text-white font-bold rounded-full px-0.5 my-5 mx-1"
+        onclick="window.location.href = '../index.html';"
+      >
+        <i class="chevron left icon transform translate-x-0.5"></i>&nbsp;
       </button>
-    <h1 class="text-4xl mb-4">
-      Blackjack
-    </h1>
+      <h1 class="text-4xl mb-4 font-bold py-4">Blackjack!</h1>
+    </div>
     <p id="message-el" class="text-lg mb-2">Want to play a round?</p>
     <p id="cards-el" class="text-lg mb-2">Cards:</p>
     <p id="sum-el" class="text-lg mb-2">Sum:</p>
-    <button class="start-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" onclick="startGame()">Start game</button>
-    <button class="newcard-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" onclick="newCard()">New card</button>
+    <div>
+      <button
+        class="start-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2"
+        onclick="startGame()"
+      >
+        start game
+      </button>
+      <button
+        class="newcard-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2"
+        onclick="newCard()"
+      >
+        new card
+      </button>
+    </div>
     <p id="player-el" class="text-lg mb-2"></p>
 
     <script src="app.js"></script>
