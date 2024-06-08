@@ -38,7 +38,7 @@ Here's how to use the different features of the game:
 This project is built using the following technologies:
 
     HTML
-    CSS
+    CSS / TailwindCSS
     JavaScript
 
 No additional dependencies are required.
@@ -49,10 +49,10 @@ If you'd like to contribute to this project, please fork the repository, make yo
 
 ## Acknowledgments
 
-This project was created by thebasilugo as a fun exercise to build a simple Blackjack game using HTML, CSS, and JavaScript. It was inspired by the classic card game.
+This project was created by thebasilugo as a fun exercise to build a simple Blackjack game using popular frontend technologies. It was inspired by the classic card game.
 
 ## Contact
 
-If you have any questions or need further assistance, feel free to contact me at basilugo2@gmail.com.
+If you have any questions or need further assistance, feel free to contact me at [email](mailto:basilugo2@gmail.com).
 
 **Enjoy playing Blackjack!**
