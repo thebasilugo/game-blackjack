@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Blackjack</title>
+  </head>
+  <body>
+    <h1>Blackjack</h1>
+    <p id="message-el">Want to play a round?</p>
+
+    <div id="all">
+      <div id="panel">
+        <span class="desc">player:</span>
+        <p>cards:</p>
+        <!-- <hr /> -->
+        <p>sum:</p>
+      </div>
+      <div id="cpu-panel">
+        <span class="desc">
+          <input
+            type="text"
+            name=""
+            id="cpu-name"
+            maxlength="6"
+            minlength="1"
+            placeholder="cpu"
+        /></span>
+        <p id="cpu-cards-el">0</p>
+        <p id="cpu-sum-el">0</p>
+      </div>
+      <div id="user-panel">
+        <span class="desc">
+          <input
+            type="text"
+            name=""
+            id="username"
+            maxlength="6"
+            minlength="1"
+            placeholder="user"
+          />
+        </span>
+        <p id="user-cards-el">0</p>
+        <p id="user-sum-el">0</p>
+      </div>
+    </div>
+    <button class="btn-uno" onclick="startGame()">Start game</button>
+    <button class="btn-dos" onclick="userNewCard()">new card</button>
+
+    <p id="player-el"></p>
+
+    <script src="app.js"></script>
+  </body>
+</html>
