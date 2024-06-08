@@ -4,56 +4,18 @@
 }
 
 body {
-  max-width: 500px;
+  width: 250px;
   /* border: 1px solid black; */
   border-radius: 8px;
   /* padding: 10px; */
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
-  margin: 80px auto;
+  margin: 100px auto;
   color: #fff;
   background: rgb(11, 83, 11);
   overflow: hidden;
   font-weight: 700;
 }
-
-/* div {
-  display: inline;
-  background: red;
-} */
-
-#all {
-  display: flex;
-  justify-content: center; /* Center the divs horizontally */
-  align-items: center; /* Center the divs vertically */
-}
-
-/* You can adjust the styling of individual divs as needed */
-#panel, #cpu-panel, #user-panel {
-  padding: 25px 20px;
-  border: 1px solid #000;
-  border-radius: 4px;
-  margin: 8px;
-  height: 150px;
-  width: 110px;
-}
-
-#all {
-  margin: 0 0 20px;
-}
-
-span input {
-  text-align: center;
-  width: 60px;
-  font-weight: 600;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 16px;
-  background: transparent;
-  color: white;
-  overflow: hidden;
-  border: transparent;
-}
-
 
 h1 {
   color: goldenrod;
@@ -65,31 +27,29 @@ h1 {
   height: 40px;
 }
 
-.btn-uno,
-.btn-dos {
+.start-btn,
+.newcard-btn {
   color: #000000;
   width: 150px;
   background: goldenrod;
   border-radius: 4px;
   text-transform: uppercase;
   font-weight: 700;
-  padding: 8px 0;
+  padding: 5px 0;
   border: none;
-  width: 50%;
   font-weight: 700;
   cursor: pointer;
   margin-bottom: 10px;
   transition: all 0.15s ease;
 }
 
-.btn-uno:hover,
-.btn-dos:hover {
+.start-btn:hover,
+.newcard-btn:hover {
   box-shadow: 1px 2px 5px #000;
   transform: translateY(-2px);
-  text-decoration: underline;
 }
 
-.btn-dos {
+.newcard-btn {
   display: none;
 }
 
@@ -103,7 +63,6 @@ button:active {
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
-  mou
 }
 
 .unavail:active {
