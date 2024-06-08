@@ -17,11 +17,11 @@ let playerEl = document.getElementById("player-el");
 // objects
 let player = {
   name: username.value,
-  chips: 20
-}
+  chips: 20,
+};
 
-let userCards = [] // array
-let cpuCards = [] // array
+let userCards = []; // array
+let cpuCards = []; // array
 let sum = 0;
 let hasBlackJack = false;
 let isAlive = false;
@@ -35,8 +35,8 @@ playerEl.textContent = player.name + ": ₦" + player.chips;
 
 // functions (arrow)
 // return keyword don't work with arrow functions
-function getRandomCard() {
-  let randomNumber = Math.floor ( Math.random() * 13) + 1;
+const getRandomCard = () => {
+  let randomNumber = Math.floor(Math.random() * 13) + 1;
   if (randomNumber === 1) {
     return 11;
   } else if (randomNumber > 10) {
@@ -44,34 +44,34 @@ function getRandomCard() {
   } else {
     return randomNumber;
   }
-}
+};
 
 const startGame = () => {
   runUser();
   runCpu();
   nameUpdate();
-}
+};
 
 const runUser = () => {
   isAlive = true;
   let userFirstCard = getRandomCard();
   let userSecondCard = getRandomCard();
-  userCards = [userFirstCard, userSecondCard]
+  userCards = [userFirstCard, userSecondCard];
   userSum = userFirstCard + userSecondCard;
   btnDos.style.display = "inline";
   renderGameUser();
   // after game starts, disable mouse and click
-}
+};
 
 const runCpu = () => {
   let cpuFirstCard = getRandomCard();
   let cpuSecondCard = getRandomCard();
-  cpuCards = [cpuFirstCard, cpuSecondCard]
+  cpuCards = [cpuFirstCard, cpuSecondCard];
   cpuSum = cpuFirstCard + cpuSecondCard;
   btnDos.style.display = "inline";
   renderGameCpu();
   // after game starts, disable mouse and click
-}
+};
 
 const renderGameUser = () => {
   userCardsEl.textContent = "";
@@ -82,21 +82,21 @@ const renderGameUser = () => {
 
   if (userSum <= 20) {
     message = "Do you want to draw a new card?";
-    btnUno.textContent = "reshuffle"
+    btnUno.textContent = "reshuffle";
   } else if (userSum === 21) {
-      message = "You've got Blackjack!";
-      hasBlackJack = true;
-      renameButton();
-    } else {
-      message = "You lose, sorry!";
-      isAlive = false;
-      renameButton();
-          // make 'new card' button invisible
+    message = "You've got Blackjack!";
+    hasBlackJack = true;
+    renameButton();
+  } else {
+    message = "You lose, sorry!";
+    isAlive = false;
+    renameButton();
+    // make 'new card' button invisible
   }
 
   messageEl.textContent = message;
   userSumEl.textContent = "" + userSum;
-}
+};
 
 const renderGameCpu = () => {
   cpuCardsEl.textContent = "";
@@ -121,13 +121,12 @@ const renderGameCpu = () => {
 
   // messageEl.textContent = message;
   cpuSumEl.textContent = "" + cpuSum;
-}
+};
 
 const renderGame = () => {
   renderGameCpu();
   renderGameUser();
-}
-
+};
 
 const userNewCard = () => {
   // if game hasn't started, run error
@@ -137,36 +136,38 @@ const userNewCard = () => {
     userCards.push(card);
     renderGame();
     renameButton();
-      // card = 0;
+    // card = 0;
   }
-}
+};
 
 const highestValidSum = () => {
   if (userSum > cpuSum && userSum <= 21) {
     userSumEl.style.textDecoration = "underline";
-    if (userSum === 21){
+    if (userSum === 21) {
       messageEl = "you win.";
     } else {
       // cpuNewCard();
-      console.log("new cpu card 151")
+      console.log("new cpu card 151");
     }
   } else if (cpuSum > userSum && cpuSum <= 21) {
     cpuSumEl.style.color = "green";
-    if (cpuSum === 21){
+    if (cpuSum === 21) {
       messageEl = "cpu wins."; // name your cpu (cpu.value?)
     } else {
-      messageEl = "you have to draw a new card, or the cpu wins." // cpu name
+      messageEl = "you have to draw a new card, or the cpu wins."; // cpu name
       btnUno.innerHTML = "forfeit";
       btnDos.style.fontWeight = "900";
     }
   } else if (cpuSum === userSum) {
     console.log("equal sum");
   }
-}
+};
 
 const gameStatus = () => {
-  console.log("find out who's losing or winning, also add the highestvalidsum function in here");
-}
+  console.log(
+    "find out who's losing or winning, also add the highestvalidsum function in here"
+  );
+};
 
 const nameUpdate = () => {
   // username update
@@ -175,12 +176,12 @@ const nameUpdate = () => {
   } else {
     playerEl.textContent = username.value + ": " + player.chips;
   }
-  
+
   // cpu name update
   if (cpuName.value === "") {
-    cpuName.value = "cpu"
+    cpuName.value = "cpu";
   }
-}
+};
 
 const cpuNewCard = () => {
   console.log("add a new cpu card 164");
@@ -188,11 +189,11 @@ const cpuNewCard = () => {
   cpuSum += card;
   cpuCards.push(card);
   renderGame();
-}
+};
 
-function renameButton() {
+const renameButton = () => {
   btnUno.textContent = "play again"; // maybe use 'message' parameter
-}
+};
 
 // let age = 100;
 
