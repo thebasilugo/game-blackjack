@@ -1,22 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blackjack</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="flex flex-col items-center justify-center min-h-screen bg-gray-200 text-gray-800">
-  <h1 class="text-4xl mb-4">Welcome to Blackjack!</h1>
-  
-  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" onclick="window.location.href = './blackjack-cpu/index.html'">
-    play with CPU
-  </button>
-  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" onclick="window.location.href = './blackjack-p1/index.html';">
-    play with Friend
-  </button>
-  
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="flex flex-col items-center justify-center min-h-screen bg-gray-200 text-gray-800"
+  >
+    <h1 class="text-4xl mb-4">Welcome to Blackjack!</h1>
+    <div class="py-4">
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2"
+        onclick="window.location.href = './blackjack-cpu/index.html'"
+      >
+        play with CPU
+      </button>
+      <button
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2"
+        onclick="window.location.href = './blackjack-p1/index.html';"
+      >
+        play with friend
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
