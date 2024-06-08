@@ -34,7 +34,6 @@ playerEl.textContent = player.name + ": ₦" + player.chips;
 // playerEl.textContent = player["name"] + ": ₦" + player["chips"];
 
 // functions (arrow)
-// return keyword don't work with arrow functions
 const getRandomCard = () => {
   let randomNumber = Math.floor(Math.random() * 13) + 1;
   if (randomNumber === 1) {
