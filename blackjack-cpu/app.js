@@ -2,36 +2,36 @@
 // Get above 21 to lose
 
 // fetch from HTML
-let messageEl = document.getElementById("message-el");
-let cardsEl = document.getElementById("cards-el");
-let sumEl = document.getElementById("sum-el");
+let messageEl = document.querySelector("#message-el");
+let cardsEl = document.querySelector("#cards-el");
+let sumEl = document.querySelector("#sum-el");
 let startBtn = document.querySelector(".start-btn");
 let newCardBtn = document.querySelector(".newcard-btn");
-let playerEl = document.getElementById("player-el");
+let playerEl = document.querySelector("#player-el");
 
 // js declaration
 // objects
 let player = {
-  name: "Ugiee",
-  chips: 958
-}
+  name: "thebasilugo",
+  chips: 958,
+};
 
-let cards = [] // array
+let cards = []; // array
 let sum = 0;
 let hasBlackJack = false;
 let isAlive = false;
 let message = "";
 
 // rendering player's name and chips from player object, in playerEl
-// let playerName = "Ugiee";
+// let playerName = "thebasilugo";
 // let playerChips = 958;
 playerEl.textContent = player.name + ": ₦" + player.chips;
 // playerEl.textContent = player["name"] + ": ₦" + player["chips"];
 
 // functions (arrow)
 // return keyword don't work with arrow functions
-function getRandomCard() {
-  let randomNumber = Math.floor ( Math.random() * 13) + 1;
+const getRandomCard = () => {
+  let randomNumber = Math.floor(Math.random() * 13) + 1;
   if (randomNumber === 1) {
     return 11;
   } else if (randomNumber > 10) {
@@ -39,21 +39,21 @@ function getRandomCard() {
   } else {
     return randomNumber;
   }
-}
+};
 
 const startGame = () => {
   isAlive = true;
   let firstCard = getRandomCard();
   let secondCard = getRandomCard();
-  cards = [firstCard, secondCard]
+  cards = [firstCard, secondCard];
   sum = firstCard + secondCard;
   newCardBtn.style.display = "inline";
   renderGame();
   // after game starts, disable mouse and click
-}
+};
 
 const renderGame = () => {
-  cardsEl.textContent = "Cards: "; 
+  cardsEl.textContent = "Cards: ";
 
   for (let i = 0; i < cards.length; i++) {
     cardsEl.textContent += cards[i] + " ";
@@ -61,21 +61,21 @@ const renderGame = () => {
 
   if (sum <= 20) {
     message = "Do you want to draw a new card?";
-    startBtn.textContent = "reshuffle"
+    startBtn.textContent = "reshuffle";
   } else if (sum === 21) {
-      message = "You've got Blackjack!";
-      hasBlackJack = true;
-      renameButton();
-    } else {
-      message = "You lose, sorry!";
-      isAlive = false;
-      renameButton();
-          // make 'new card' button invisible
+    message = "You've got Blackjack!";
+    hasBlackJack = true;
+    renameButton();
+  } else {
+    message = "You lose, sorry!";
+    isAlive = false;
+    renameButton();
+    // make 'new card' button invisible
   }
 
   messageEl.textContent = message;
   sumEl.textContent = "Sum: " + sum;
-}
+};
 
 const newCard = () => {
   // if game hasn't started, run error
@@ -85,13 +85,13 @@ const newCard = () => {
     cards.push(card);
     renderGame();
     renameButton();
-      // card = 0;
+    // card = 0;
   }
-}
+};
 
-function renameButton() {
+const renameButton = () => {
   startBtn.textContent = "play again";
-}
+};
 
 // let age = 100;
 

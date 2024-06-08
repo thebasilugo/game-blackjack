@@ -4,22 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <title>Blackjack</title>
   </head>
-  <body>
-    <h1>Blackjack</h1>
-    <p id="message-el">Want to play a round?</p>
-    <p id="cards-el">Cards:</p>
-    <p id="sum-el">Sum:</p>
-    <button class="start-btn" onclick="startGame()">Start game</button>
-    <button class="newcard-btn" onclick="newCard()">New card</button>
-    <p id="player-el"></p>
-
-    <!-- <div id="both">
-      <span>yes</span>
-      <span>no</span>
-    </div> -->
-    <script src="app.js"></script>
+  <body class="flex flex-col items-center justify-center min-h-screen bg-gray-200 text-gray-800">
+    <h1 class="text-4xl mb-4">Blackjack</h1>
+    <p id="message-el" class="text-lg mb-2">Want to play a round?</p>
+    <p id="cards-el" class="text-lg mb-2">Cards:</p>
+    <p id="sum-el" class="text-lg mb-2">Sum:</p>
+    <button class="start-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" onclick="startGame()">Start game</button>
+    <button class="newcard-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2" onclick="newCard()">New card</button>
+    <p id="player-el" class="text-lg mb-2"></p>
   </body>
 </html>
