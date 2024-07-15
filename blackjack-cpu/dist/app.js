@@ -5,3 +5,10 @@ let sumEl = document.querySelector("#sum-el");
 let startBtn = document.querySelector(".start-btn");
 let newCardBtn = document.querySelector(".newcard-btn");
 let playerEl = document.querySelector("#player-el");
+
+//  js declaration
+// objects
+let player = {
+  name: "thebasilugo",
+  chips: 958,
+};
