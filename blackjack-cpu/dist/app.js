@@ -18,3 +18,9 @@ let sum = 0;
 let hasBlackJack = false;
 let isAlive = false;
 let message = "";
+
+// rendering player's name and chips from player object, in playerEl
+// let playerName = "thebasilugo";
+// let playerChips = 958;
+playerEl.textContent = player.name + ": ₦" + player.chips;
+// playerEl.textContent = player["name"] + ": ₦" + player["chips"];
