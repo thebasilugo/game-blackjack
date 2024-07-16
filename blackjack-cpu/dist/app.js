@@ -9,8 +9,7 @@ let player = {
   name: "thebasilugo",
   chips: 958,
 };
-
-let cards = []; // array
+let cards = [];
 let sum = 0;
 let hasBlackJack = false;
 let isAlive = false;
